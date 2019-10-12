@@ -1,0 +1,33 @@
+.step_modal { width: 100%; right: 0px; padding: 60px 20px 90px 20px; height: 100%; }
+.step_body{max-height: 100%; height: calc(100vh - 225px); position: relative;}
+.step_body:before{position: absolute; left: 50%; height: 100%; width: 1px; background: #CCCED2; content: ""}
+.step_inner{vertical-align: middle; border-radius: 0px 0px 4px 4px; height: 100%;}
+.step_body .form-group.icon .form-control{padding: 0px 20px 0px 60px; background: #F5F6F8}
+.step_body .form-group.icon i{left: 25px; top: 0px; font-size: 21px; line-height: 44px;}
+
+.cuisine_list { float: left; width: 50%; height: 100%; padding-bottom: 45px; position: relative;}
+.cuisine_list ul{padding: 15px; float: left; width: 100%; height: 100%;}
+.cuisine_list li{padding: 5px; float: left; width: 33.3%; list-style: none}
+.cuisine_list li div{float: left; transition: 0.2s; width: 100%; background-size: cover; background-position: center; height: 120px; position: relative; border-radius: 4px; overflow: hidden; cursor: move;}
+.cuisine_list li div:hover{transform: scale(1.1); z-index: 9;}
+.cuisine_list li h5{position: absolute; left: 0px; bottom: 0px; width: 100%; padding:30px 10px 15px 10px; margin: 0px; color: #fff; text-align: center; background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 1))); background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 1) 100%); background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 100%); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+.cuisine_list p{margin: 0px; padding: 15px 25px}
+
+.note{position: absolute; width: 100%; left:0px; top: 50%; margin-top: -65px; text-align: center; font-size: 16px; font-style: italic; color: #999; transform: scale(1)}
+.note i{display: block; font-size: 50px; color: #999; padding-left: 13px}
+.move .note, .dropped .note{transform: scale(0)}
+
+.scroll-wrapper.move{overflow: visible !important}
+
+@media (min-width: 1601px){     
+    .step_modal{padding: 90px 120px 120px 120px;}
+    .step_body{height: calc(100vh - 290px);}
+    .step_body .form-group.icon .form-control{height: 56px; line-height: 56px; padding-left: 65px}    
+    .step_body .form-group.icon i{font-size: 24px; line-height: 56px;}
+    .cuisine_list{padding-bottom: 58px;}
+    .cuisine_list li{padding: 7px;}
+    .cuisine_list li div{height: 140px;}
+    .cuisine_list li h5{font-size: 16px}
+    .note{font-size: 18px; margin-top: -90px}
+    .note i{font-size: 70px;}
+}

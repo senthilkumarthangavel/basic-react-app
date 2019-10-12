@@ -1,0 +1,262 @@
+body.modal-open, body.modal-open{padding-right: 0px !important}
+.menu_list, .menu_type{float: left; width: calc(100% - 340px); height: 100vh; position: relative;}
+.menu_list .form-group.icon .form-control{border: 0px; padding-left: 55px; background: #F0F1F6}
+.form-group.icon i{font-size: 22px; left: 15px;}
+.menu_list{background: #fff; overflow: hidden; padding: 0px 0px}
+.menu_list:after{position: absolute; content: ""; right: 0px; top: 0px; height: 100%; width: 8px; background: #E4E6ED}
+.menu_list .actions .tooltip-inner{white-space: nowrap}
+.menu_list ul.list{display: table; width: 100%; padding-bottom: 190px}
+.menu_list ul.list li{display: table-row;}
+.menu_list ul.list li:last-child .content{border: 0px}
+.menu_list ul.list li .content{display: table-cell; vertical-align: middle; height: 85px; width: 100%; position: relative; padding: 10px 120px 10px 100px; border-bottom: 1px solid #DADAE0; transition: 0.2s}
+.menu_list ul.list li .content:hover{background: #F7F7FB}
+.menu_list ul.list li .content h5{font-size: 14px}
+.menu_list ul.list li .img{position: absolute; left: 15px; top: 50%; margin-top: -34px; width: 68px; height: 68px; border-radius: 100px; background-size: cover; background-position: center;}
+.menu_list ul.list li .actions{position: absolute; right: 15px; width: auto; top: 50%; margin-top: -12px;}
+.menu_list p.tag{margin-bottom: 5px; line-height: normal}
+.menu_list p.tag span{display: inline-block; margin-right: 7px; line-height: 18px; padding: 0px 10px; border-radius: 100px; font-size: 11px; font-family: 'QuicksandMedium'; color:#fff}
+.menu_list p.tag .orange{background: #FC8019}
+.menu_list p.tag .red{background: #f25555}
+.menu_list p.tag .green{background: #3DC55C}
+.menu_list p.tag .yellow{background: #f2b916}
+.menu_list p.date{margin-top: 5px; line-height: normal; color: #999; font-size: 12px; font-family: 'QuicksandMedium'}
+
+.pagination{position: absolute; bottom: 70px; left: 0px; z-index: 99; padding: 0px 0px; width: 100%; border-radius: 0px; margin: 0px; box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2)}
+.pagination ul{background: #fff; padding: 10px 15px; width: 100%; text-align: center}
+.pagination ul li{display: inline-block; margin-left: -5px}
+.pagination ul li a{display:block; line-height: 26px; min-width: 26px; margin: 0px 5px; padding: 0px 5px; font-size: 13px; border: 0px; text-decoration: none; color: #666; font-family: 'QuicksandMedium'; border-radius: 100px;}
+.pagination ul li a:hover{background: #EFF0F3; color: #202020}
+.pagination ul li a.active{background: #FC8019; color: #fff}
+.pagination ul li:first-child{margin-right: 10px}
+.pagination ul li:last-child{margin-left: 10px}
+.pagination ul li a.icon i{font-size: 18px; position: relative; top: 2px}
+.pagination ul li.more{font-size: 16px; letter-spacing: 1px;}
+
+.menu_type{width: 340px}
+.menu_type:before{content: ''; display: inline-block; height: 100%; vertical-align: middle; margin-right: -5px;}
+.menu_type .content{display: inline-block; width: 100%; vertical-align: middle; padding: 20px 10px 70px 10px; text-align: center}
+.menu_type .desc{color: #666}
+.menu_type li{display: inline-block; margin: 5px 7px; max-width: 140px; width: 100%;}
+.menu_type li .box{padding: 18px 5px; border: 1px solid #fff; background: #fff; float: left; width: 100%; border-radius: 4px; text-decoration: none; color: #202020; font-family: 'QuicksandMedium'; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25)}
+.menu_type li .box:hover{border-color: #FC8019; background: #FFF4EA; color: #FC8019; box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2)}
+.menu_type li .box i{display: block; margin-bottom: 10px; font-size: 32px; line-height: 32px}
+
+.menu_setup{overflow: hidden !important;}
+.menu_setup .modal-dialog{-webkit-transform: scale(1) !important; -ms-transform: scale(1) !important; -o-transform: scale(1) !important; transform: scale(1) !important; position: absolute; top: 0px; right: 0px; height: 100%; border-radius: 0px; max-width: 1040px; width: 100%}
+.menu_setup .modal-body{padding: 0px; position: absolute; top: 0px; right: -100%; height: 100%; border-radius: 0px; width: 100%; border-radius: 0px; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; -webkit-transition: all 0.3s ease; background: url(../img/pattern-2.png) #F0F1F6; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)}
+.modal-open .menu_setup.in .modal-body{right: 0px}
+.menu_setup .modal-header{float: left; width: 100%; padding: 0px 20px 0px 55px; background: #fff; box-shadow: 0px 1px 6px rgba(99, 101, 113, 0.2); height: 70px; border: 0px; z-index: 10;}
+.menu_setup .modal-header h5{line-height: 70px; float: left; color: #202020}
+.menu_setup .modal-header .modal-close { position: absolute; top: 0px; text-decoration: none; font-size: 27px; color: #202020; opacity: 1; line-height: 68px; left: 15px; right: auto}
+.modal-header .actions{width: auto; float: right; position: absolute; top: 50%; right: 20px; margin-top: -21px;}
+
+.form, .addons{width: calc(100% - 340px); float: left; height: 100vh; padding-bottom: 70px; position: relative;}
+.form .content{float: left; width: 100%; padding: 20px 23px 0px 15px}
+.form .content [class*=col-]{padding: 0px 5px}
+.form .row{margin: 0px -5px}
+.form .form-group{margin-bottom: 10px}
+.form:after { position: absolute; content: ""; right: 0px; top: 0px; height: 100%; width: 8px; background: #dadde4;}
+
+.upload label{display: inline-block; width: 105px; height: 105px; position: relative; background-size: cover; background-position: center; border-radius: 5px; border: 4px solid #fff; box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3); cursor: pointer;}
+.upload label span{position: absolute; left: 0px; bottom: 0px; padding: 5px; width: 100%; background: rgba(0, 0, 0, 0.4); text-align: center; color: #fff; font-size: 13px; font-family: 'QuicksandMedium'}
+
+.visibility .toggle { display: block; font-size: 13px; position: relative; text-decoration: none; color: #666; padding: 10px 40px 10px 12px; background: #fff; border-radius: 4px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+.visibility .toggle span{display: block; color: #333; margin-top: 5px}
+.visibility .toggle i{position: absolute; left: 0px; top: 15px; font-size: 29px; color: #404040}
+.visibility .toggle:after { content: "\f110"; font: normal normal normal 16px/1 LineAwesome; position: absolute; bottom: 12px; right: 10px; font-size: 17px; }
+.visibility.open .toggle:after{content: "\f113";}
+.visibility .dropdown-menu{border: 0px; border-radius: 0px 0px 4px 4px; margin: 15px 0px; width: 320px; padding: 10px 15px 15px 15px; box-shadow: 0px 1px 4px rgba(99, 101, 113, 0.3); display: block; opacity: 0; visibility: hidden;  -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; -webkit-transition: all 0.2s ease;}
+.visibility .dropdown-menu li{float: left; width: 100%; margin-top: 10px;}
+.visibility .dropdown-menu li:first-child{margin: 0px}
+.visibility .dropdown-menu li label{font-size: 13px; line-height: normal}
+.visibility .dropdown-menu:before { content: ""; position: absolute; top: -5px; left: 0px; width: 100%; height: 5px; background: #fff; border-radius: 4px 0px 0px 0px}
+.visibility.open .dropdown-menu{opacity: 1; visibility: visible; margin: 0px}
+.visibility .datepicker-days{position: relative; margin-top: 10px}
+.visibility .bootstrap-datetimepicker-widget table td.day{cursor: pointer !important;}
+.visibility .bootstrap-datetimepicker-widget table td.disabled, .visibility .bootstrap-datetimepicker-widget table td.disabled:hover{color: #999}
+.visibility .datepicker-days:before { content: ""; position: absolute; left: 40px; top: 0px; height: 30px; width: 210px; z-index: 9; }
+.visibility .datepicker-days table th.prev, .visibility .datepicker-days table th.next{background: none !important; width: 0px !important; height: 0px !important; cursor: default; line-height: normal; padding: 0px}
+.visibility .datepicker-days table th.prev span, .visibility .datepicker-days table th.next span{width: 100%; height: 25px; line-height: 25px; border-radius: 4px; background: #EFF0F3; font-size: 11px; color: #8b8b90; cursor: pointer;}
+.visibility .datepicker-days table th.prev span:hover, .visibility .datepicker-days table th.next span:hover{background: #e1e2e8; color: #333}
+.visibility .datepicker-days table th.disabled span, .visibility .datepicker-days table th.disabled span{cursor: not-allowed}
+.visibility td.today:before, .visibility .accordion-toggle{display: none !important}
+.visibility .bootstrap-datetimepicker-widget table td.active, .visibility .bootstrap-datetimepicker-widget table td.active:hover{background: #FC8019 !important; color: #fff; text-shadow: none !important}
+
+.visibility .table_form{font-size: 13px; margin-top:10px}
+.visibility .table_form .td{padding-top: 5px; padding-bottom: 5px;}
+.visibility .actions.icon a{margin: 0px}
+.visibility .actions.icon a.edit{margin-left: 10px}
+.visibility .add_action a{font-size: 13px}
+.visibility .add_action a i{font-size: 21px}
+
+.showTime{float: left; line-height: 32px; font-size: 13px;}
+.visibility .btn, .visibility .cancel{height: 30px; line-height: 30px; min-width: 70px; padding: 0px 10px;}
+
+.hide_until p{margin: -22px 0px 0px 0px; text-align: right; font-size: 14px; font-family: 'QuicksandMedium';}
+.time_range.ui-widget.ui-widget-content { border: 0px; background: #E0E1E8; height: 6px; border-radius: 100px; }
+.time_range .ui-slider-handle { background: #fff; border-radius: 100px; box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); outline: none; top: -6px; border: 1px solid #c6c8cf; }
+.time_range .ui-slider-handle span{position: absolute; width: 60px; font-size: 12px; text-align: center; line-height: 23px; background: rgb(120, 123, 144); color: #fff; border-radius: 4px; left: 50%; margin-left:-30px; top: -30px}
+.time_range .ui-slider-handle span:before { content: ""; position: absolute; width: 0; height: 0; border-color: transparent; border-style: solid; border-width: 5px 5px 0; border-top-color: #787b90; top: 100%; left: 25px; }
+.time_range.ui-slider-horizontal .ui-slider-range{background: #3DC55C}
+
+.days_form{margin: 10px -5px 5px -5px}
+.days_form li{float: left; width: 14.2% !important; padding: 0px 5px; margin: 0px !important; text-align: center}
+.days_form li label { margin: 0px; display: inline-block; padding: 0px 0px; width: 32px; line-height: 30px !important; height: 32px; border: 1px solid #c9cad0; background: #fff; text-align: center; text-transform: capitalize; font-family: 'QuicksandMedium'; font-size: 11px; cursor: pointer; border-radius: 100px; }
+.days_form input[type="checkbox"]:checked + label{background: #3DC55C; color: #fff; border-color: #3DC55C}
+
+.category .form-control{padding: 0px 25px 0px 10px !important; cursor: pointer; line-height: 33px !important;}
+.category .form-group:after { content: "\f110"; font: normal normal normal 16px/1 LineAwesome; position: absolute; bottom: 10px; right: 10px; font-size: 17px; }
+.category.open .form-group:after{content: "\f113"}
+.category .dropdown-menu { border: 1px solid #CCCED2; border-top: 0px; max-height: 350px; overflow: auto; border-radius: 0px 0px 4px 4px; margin-top: 5px; width: 100%;  padding: 0px 10px; box-shadow: 0px 1px 4px rgba(99, 101, 113, 0.3); display: block; opacity: 0; visibility: hidden; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; -webkit-transition: all 0.2s ease; }
+.category.open .dropdown-menu{opacity: 1; visibility: visible; margin: -10px 0px 0px 0px;}
+.category.open .form-group{border-radius: 4px 4px 0px 0px}
+.category ul li, .category ul label{float: left; width: 100% !important}
+.category ul input[type="checkbox"] + label.checkbox{padding-top: 8px; padding-bottom: 8px;}
+.category input[type="checkbox"] + label.checkbox:before{top: 7px}
+.category ul li{border-left: 1px dashed #BBBDC2; padding-left: 40px; position: relative;}
+.category ul li.sub_category{padding-left: 40px}
+.category ul li:first-child{padding-top: 10px}
+.category ul li:last-child{padding-bottom: 10px}
+.category ul label:after { content: ""; position: absolute; height: 1px; width: 40px; border-top: 1px dashed #B4B5B9; left: -40px; top: 14px; }
+.category ul li.sub_category label:after{left: -40px; width: 15px}
+.category ul li:first-child .category_action{top: 15px}
+.category_action { position: absolute; left: 14px; top: 5px; color: #87898e; cursor: pointer; background: #fff; z-index: 1;}
+.category_action[aria-expanded="true"]::before{content: "\f28f"}
+.category ul li li{padding-left: 35px; border: 0px}
+.category ul li ul{position: relative; margin-left: -15px; border-left: 1px dashed #B4B5B9; float: left;}
+/* .category ul li.sub_category li:last-child:after { content: ""; position: absolute; height: 11px; left: -1px; width: 1px; background: #fff; bottom: 0px; } */
+.category ul li li:first-child{padding-top: 0px}
+.category ul li li:last-child{padding-bottom: 0px !important}
+.category ul li.sub_category li label:after { left: -35px; width: 35px; }
+
+.mark_items{text-align: right}
+.mark_items span{margin-right:10px; font-family: 'QuicksandMedium'; line-height: 60px}
+.mark_items label { display: inline-block; cursor: pointer; float: none; min-width: 65px; width: auto; padding: 0px 5px; margin: 0px; margin-left: 4px; text-align: center; height: 60px; padding-top: 8px; background: #fff; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25); border-radius: 4px; font-size: 11px; text-transform: uppercase; font-family: 'QuicksandMedium'; }
+.mark_items label i { display: block; font-size: 22px; line-height: 25px; height: 25px; margin-bottom: 5px; }
+.mark_items input[type="radio"]:checked + label{background: #3DC55C; color: #fff; border-color: #3DC55C}
+
+.form .drop_zone, .form-group.size{background: #fff; padding: 0px; margin: 5px 0px 15px 0px; border: 0px;}
+.form .drop_zone ul{border: 1px dashed #9ea2a9; border-radius: 4px; padding: 10px 4px 4px 10px; }
+.form .drop_zone.move ul.ui-droppable-active{background: #f0fff3; border-color: #47c561; }
+.form .drop_zone.moved span{display: none}
+.drop_zone span, .drop_choice{font-style: italic; color: #999;}
+.drop_zone span { position: absolute; left: 15px; top: 23px; z-index: 6;}
+.drop_zone ul{min-height: 70px; position: relative; z-index: 5;}
+
+ul.choice_list{float: left; width: 100%; position: relative; z-index: 5;}
+ul.choice_list li{float: left; cursor: pointer; margin: 0px 6px 6px 0px; padding: 8px 55px 8px 8px; line-height: normal; font-size: 12px; background: #f0f1f6; border-radius: 4px; position: relative; color: #202020; font-style: normal}
+ul.choice_list li:hover{background: #E6E7EE}
+ul.choice_list .actions.icon a i { font-size: 14px; }
+ul.choice_list .actions.icon a{height: 20px; line-height: 20px; width: 20px;}
+ul.choice_list .actions.icon{position: absolute; top: 6px !important; right: 3px !important;}
+
+ul.choice_list input[type="radio"] + label.radio, ul.choice_list input[type="checkbox"] + label.checkbox { background: none; padding-top: 0px; padding-bottom: 0px; font-size: 12px; padding-right: 0px}
+ul.choice_list .form-control { position: absolute; right: 28px; top: 5px; width: 55px; padding: 0px 5px !important; line-height: 26px !important; height: 26px !important; text-align: center; border: 1px solid #CCCED2 !important; }
+ul.choice_list.style1 .actions.icon{top: 8px !important}
+ul.choice_list.style1 li{padding: 10px 90px 10px 8px}
+
+.drop_choice ul{margin-top: 5px; min-height: 35px; border: 1px dashed #fff; border-radius: 4px; padding: 5px 5px 0px 5px;}
+.drop_choice.move ul{background: #f0fff3; border-color: #47c561; }
+.drop_choice span{position: absolute; top: 12px; left: 5px; z-index: 6;}
+.drop_choice.moved span{display: none}
+.form-group.size { min-height: inherit; padding: 8px 5px 5px 5px; margin: -5px 0px 10px 0px; border: 1px solid #CCCED2; }
+.form-group.size p{padding: 0px 5px; line-height: normal}
+.form-group.size p.medium{padding-right: 260px; padding-bottom: 5px; padding-top: 3px}
+.form-group.size .actions.icon{position: absolute; width: auto; top: 8px; right: 8px; }
+.form-group.size .actions label{padding: 0px 0px 0px 20px; margin-right: 20px; font-size: 13px; color: #999; line-height: normal}
+.form-group.size .actions label i{float: right; margin-left: 5px; top: -2px; position: relative;}
+.form-group.size .actions label .tooltip-inner{width: 200px}
+
+#add_size .actions, .add_group .actions{float: right;}
+#add_size .actions a, .add_group .actions a{ float: left; height: 34px; line-height: 34px; width: 34px; border-radius: 100px; margin: 4px 0px 0px 0px; }
+#add_size .actions a.save, .add_group .actions a.save{border: 1px solid #3DC55C; background: #EAFFEA; color: #3DC55C;}
+#add_size .actions a.save:hover, .add_group .actions a.save:hover{background: #3DC55C; color: #fff}
+#add_size .actions a.delete, .add_group .actions a.delete{border: 1px solid #e47c7c; background: #ffeaea; color: #E41818; line-height: 32px; margin-left: 7px}
+#add_size .actions a.delete:hover, .add_group .actions a.delete:hover{background: #e85353; color: #fff; border-color: #e85353}
+
+.setting_main{margin: 0 -20px;}
+.settings{padding: 15px 20px 20px 20px; margin-top: 20px; background: rgba(112,110,119,1); background: -moz-linear-gradient(top, rgba(112,110,119,1) 0%, rgba(144,144,151,1) 100%); background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(112,110,119,1)), color-stop(100%, rgba(144,144,151,1))); background: -webkit-linear-gradient(top, rgba(112,110,119,1) 0%, rgba(144,144,151,1) 100%); background: -o-linear-gradient(top, rgba(112,110,119,1) 0%, rgba(144,144,151,1) 100%); background: -ms-linear-gradient(top, rgba(112,110,119,1) 0%, rgba(144,144,151,1) 100%); background: linear-gradient(to bottom, rgba(112,110,119,1) 0%, rgba(144,144,151,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#706e77', endColorstr='#909097', GradientType=0 )}
+.settings .sub_head{color: #fff}
+.settings .table_form{padding: 20px 0px; background: #fff; border-radius: 4px;}
+.settings .table_form .td{padding: 10px 20px}
+.settings .table_form .form-group.sm{width: 180px}
+.form-group.sm .bootstrap-select button, .form-group.sm .bootstrap-select .dropdown-menu{font-size: 13px}
+
+.addons{width: 340px; font-size: 13px}
+.addons .collapse *, .addons .collapse_form *, .addons .collapse_form .btn{font-size: 13px}
+.addons .btn{font-size: 14px}
+.addons .content{float: left; width: 100%; padding: 20px 12px 50px 12px;}
+.addons .info .top .tooltip-inner{width: 200px}
+.collapse_form [id*=add_choice] .content { padding: 15px 12px 0px 12px !important; margin-top: -10px; }
+.collapse_form .table_form.content .td{cursor: move;}
+.collapse_form .table_form .td.actions{cursor: default;}
+.collapse_form .table_form li{background: #fff}
+.collapse_form .table_form li.ui-sortable-helper{background: rgba(255, 255, 255, 0.61); box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); border-radius: 4px; min-height: 38px; display: table;}
+.collapse_form .table_form li.ui-sortable-helper .td{border: 0px !important; padding-top: 6px; padding-bottom: 6px;}
+.collapse_form .actions.icon{position: absolute; right: 12px; top: 10px; display: none}
+.collapse_form:hover .actions.icon{display: inline-block}
+.collapse_form .td.actions{position: static; display: table-cell !important}
+
+.choice_drag.ui-draggable-dragging { padding: 7px 10px; border-radius: 4px; background: #3DC55C; font-size: 12px; z-index: 99; font-family: 'QuicksandMedium'; color: #fff; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); cursor: default; }
+
+.choice_price{ position: absolute; left: 0px; top: 0px; padding: 30px 0px; overflow: auto; height: 100%; width: 100%; z-index: 999; background: rgba(255, 255, 255, 0.7); display: none; text-align: center}
+.choice_form{max-height: 300px; min-height: 50px; margin: 0px -15px; overflow: auto}
+.choice_form .table_form{padding: 0px 15px}
+.choice_price:before{content: ''; display: inline-block; height: 100%; vertical-align: middle; margin-right: -5px;}
+.choice_price .content { display: inline-block; transition: 0.3s; transform: scale(0); width: 100%; vertical-align: middle; text-align: left; max-width: 400px; border-radius: 4px; background: #fff; box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15); padding: 15px; }
+.choice_price.open .content{transform: scale(1)}
+.choice_price .form-control{padding: 0px 5px !important}
+
+.content.items{padding: 42px 0px 50px 0px; background: #fff}
+.content.items .form-group.search .form-control{border: 0px; border-bottom: 1px solid #CCCED2; border-radius: 0px;}
+.content.items .form-group.search{position: absolute; left: 0px; top: 0px; width: 100%; z-index: 9;}
+
+.addons ul.drag_items{padding: 10px 0px}
+.drag_items li{float: left; width: 100%; position: relative; cursor: pointer;}
+.drag_items li span{display: block; padding: 10px 15px 10px 32px; cursor: pointer;}
+.drag_items li:nth-child(odd){background: #fff}
+.drag_items li:nth-child(even){background: #F4F5F9}
+.drag_items li::before { content: "\f178"; font-family: Flaticon; font-style: normal; position: absolute; left: 10px; top: 50%; line-height: 20px; margin-top: -9px; font-size: 12px; color: #999; }
+
+.form-group.customizable{float: none; display: inline-block; width: auto; white-space: nowrap; font-size: 13px; margin-right: 5px}
+.form-group.customizable span{line-height: 25px; float: left; color: #999; font-family: 'QuicksandMedium';}
+.form-group.customizable label { padding: 0px 20px; width: 70px; border: 1px solid #ccced2; margin-left: 5px; border-radius: 4px}
+.form-group.customizable label span { position: absolute; right: 0px; top: 0px; line-height: 25px; cursor: pointer; width: 25px; font-size: 17px; text-align: center}
+.form-group.customizable label span:first-child{left: 0px;}
+.form-group.customizable label .form-control{line-height: 25px !important; height: 25px !important; padding: 0px !important; text-align: center}
+.form-group.customizable label span i { font-size: 15px; float: left; text-align: center; width: 100%; line-height: 25px; }
+.form-group.customizable div{float: left; margin-left: 10px}
+
+.drag_box{border-radius: 4px; border: 1px solid #CCCED2; background: #fff}
+.drag_box:after{content: ""; position: absolute; left: 50%; top: 0px; width: 1px; height: 100%; background: #CCCED2;}
+.drag_box .empty { position: absolute; left: 0px; top: 0px; width: 100%; text-align: center; top: 50%; margin-top: -40px; font-style: oblique; color: #999; transition: 0.2s}
+.drag_box .empty i{display: block; margin-bottom: 10px; font-size: 30px; line-height: 30px; padding-left: 10px;}
+.drag_box .drop_items.dropped .empty, .drag_box.move .empty{transform: scale(0); opacity: 0; visibility: hidden;}
+.drag_box .form-group.search{z-index: 2;}
+.drag_box .form-group.search .form-control{border: 0px; border-bottom: 1px solid #CCCED2; border-radius: 4px 4px 0px 0px;}
+.drag_box .drag_items, .drag_box .drop_items{float: left; width: 50%; position: relative;}
+.drag_box ul.drag_items{height: 300px;}
+.drag_box .drop_items .drag_items, .drag_box .drag_items .drag_items{width: 100%}
+.drag_box .drag_items li{padding: 10px 15px 10px 32px; cursor: pointer; font-size: 13px; cursor: move}
+.drag_box #drag_items .form-control{display: none}
+.drag_box #drop_items .form-control {display: block; top: 50%; margin-top: -16px; display: block; position: absolute; right: 10px; width: 65px; padding: 0px 4px; text-align: center; height: 32px; line-height: 32px; }
+.drag_box #drop_items li{padding: 15px 85px 15px 32px}
+.drag_box .ui-sortable-helper .form-control{display: none}
+.drag_box .ui-sortable-helper{list-style: none; position: absolute; background: #fff; z-index: 9; border-radius: 4px; padding: 8px; box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); display: inline-block; height: auto !important; font-size: 13px}
+
+.scrollbar-inner > .scroll-element.scroll-y{right: 0px;}
+.scrollbar-inner > .scroll-element.scroll-y .scroll-bar{ width: 8px !important}
+.scrollbar-inner > .scroll-element .scroll-element_outer{opacity: 0.16;}
+.addons .scrollbar-inner > .scroll-element.scroll-x{display: none !important}
+
+@media (min-width: 1601px){
+    .menu_list .form-group.icon .form-control{height: 55px; line-height: 55px;}
+    .form-group.icon i{line-height: 55px;}
+    .menu_list{width: 55%;}
+    .menu_type{width: 45%}
+    .menu_type .content{padding: 20px 30px 70px 30px;}
+    .menu_type li .box i{font-size: 42px; line-height: 42px}
+    .menu_type li{max-width: 200px; margin: 8px 10px}
+    .menu_type li .box{padding: 30px 10px}
+    .menu_list ul.list li .content h5{font-size: 16px}
+}

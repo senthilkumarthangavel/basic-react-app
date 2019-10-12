@@ -1,0 +1,65 @@
+body.login, body.modal-open, body.modal-open{padding: 0px !important; background: #fff}
+.banner{position: absolute; float: left; width: calc(100% - 650px); padding: 40px 70px 0px 70px; background: url(../images/pattern-1.png); left: 0px; top: 0px}
+.banner:before{content: ""; height: calc(100% - 262px); width: 100%; position: absolute; top: 0px; left: 0px; background: rgba(253,240,233,1); background: -moz-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(253,240,233,1) 52%, rgba(255,252,250,1) 100%); background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(253,240,233,1)), color-stop(52%, rgba(253,240,233,1)), color-stop(100%, rgba(255,252,250,1))); background: -webkit-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(253,240,233,1) 52%, rgba(255,252,250,1) 100%); background: -o-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(253,240,233,1) 52%, rgba(255,252,250,1) 100%); background: -ms-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(253,240,233,1) 52%, rgba(255,252,250,1) 100%); background: linear-gradient(to bottom, rgba(253,240,233,1) 0%, rgba(253,240,233,1) 52%, rgba(255,252,250,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdf0e9', endColorstr='#fffcfa', GradientType=0 ); z-index: -9;}
+.banner:after{content: ""; height: 262px; width: 100%; position: absolute; bottom: 0px; left: 0px; background: rgba(253,240,233,1); background: -moz-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(255,250,247,1) 100%); background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(253,240,233,1)), color-stop(100%, rgba(255,250,247,1))); background: -webkit-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(255,250,247,1) 100%); background: -o-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(255,250,247,1) 100%); background: -ms-linear-gradient(top, rgba(253,240,233,1) 0%, rgba(255,250,247,1) 100%); background: linear-gradient(to bottom, rgba(253,240,233,1) 0%, rgba(255,250,247,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdf0e9', endColorstr='#fffaf7', GradientType=0 );}
+.banner h1{font-family: 'QuicksandRegular'; margin-top: 30px; color: #442415; font-size: 45px; letter-spacing: -0.01em; line-height: 63px; position: relative;}
+.banner h1 span{display: block;}
+.login:after{content: ""; position: absolute; left: 0px; bottom: 30px; width: calc(100% - 650px); height: 618px; background: url(../images/login-graphic.png) no-repeat center bottom; background-size: 853px; z-index: 9;}
+
+.form{float: right; width: 650px; padding: 60px 70px; text-align: center; overflow: auto;}
+.form:before{content: ''; display: inline-block; height: 100%; vertical-align: middle; margin-right: -5px;}
+.form .content{display: inline-block; text-align: left; vertical-align: middle; width: 100%}
+.form .content img{margin-left: -6px}
+.form h2{margin: 10px 0px 50px 0px; font-size: 32px; letter-spacing: -0.01em; font-family: 'QuicksandRegular';}
+.form h2 b{font-family: 'QuicksandMedium';}
+.form h3{font-family: 'QuicksandRegular';}
+
+.login .form-group{position: relative; margin: 0px}
+.login .form-group.icon .form-control{border:2px solid #E7E4E2; border-radius: 4px; height: 75px; padding: 25px 50px 0px 20px; font-size: 18px; line-height: normal; border-radius: 0px 0px 4px 4px}
+.login .form-group:first-child .form-control{border-bottom: 0px; border-radius: 4px 4px 0px 0px}
+.login .form-group.icon i { position: absolute; line-height: 75px; top: 0px; left: auto; right: 22px; font-size: 24px; color: #A5A19F; width: 24px; text-align: center}
+.login label{position: absolute; left: 0px; top: 0px; line-height: 75px; padding: 0px 20px; cursor: text; font-size: 18px; color: #999; margin: 0px}
+.login input[type="password"]{font-size: 23px; letter-spacing: 2px}
+.login .form-group.has-value label{line-height: 45px; font-size: 16px;}
+.login .form-group.has-value i{color: #FF8100}
+.login .form-group.has-error .form-control{background: #fff2f2 !important;}
+.login .form-group.has-error i, .login .form-group.has-error label{color: #de4a4a !important}
+.form .btn{width: 100%; height: 64px; line-height: 64px; font-size: 22px; margin:15px 0px 30px 0px; overflow: hidden;}
+.form .btn i{font-size: 26px; position: absolute; line-height: 64px; right: 20px; top: 0px; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; -webkit-transition: all 0.2s ease;}
+.form .btn.loading i{right: -100%}
+
+.forgot{text-align: center;}
+.forgot a{color: #666; font-size: 16px}
+.forgot a:hover{color: #FF8100; text-decoration: underline}
+.desc{color: #666; font-size: 16px}
+.login .modal .form-group:first-child .form-control{border: 2px solid #E7E4E2}
+
+body .modal-sm{max-width: 650px;}
+body .modal{text-align: right}
+body .modal-dialog{vertical-align: bottom; padding: 20px 70px 70px 70px}
+body .modal-backdrop.in{opacity: 0.5;}
+body .modal-backdrop{background: #170a00}
+
+@media (max-width: 1600px){
+    .banner{padding: 30px 40px 0px 40px}
+    .banner h1{font-size: 32px; line-height: 45px; margin-top: 15px;}
+    .banner img{max-width: 220px;}
+    .login:after{background-size: 600px}
+    .form h2{font-size: 24px; margin-bottom: 30px}
+    .form .content img{max-width: 70px;}
+
+    .banner, .login:after{width: calc(100% - 500px)}
+    .form{width: 500px; padding: 40px 50px}
+    .form h3, .login .form-group.icon .form-control, .login label{font-size: 16px}
+    .login .form-group.icon .form-control{height: 65px;  padding: 25px 50px 0px 20px}
+    .login label, .login .form-group.icon i{line-height: 65px}
+    .login .form-group.icon i{font-size: 18px}
+    .login .form-group.has-value label{font-size: 14px; line-height: 40px;}
+    .form .btn{height: 54px; line-height: 54px; font-size: 18px; margin-bottom: 20px}
+    .form .btn i{line-height: 54px; font-size: 22px}
+    .forgot a{font-size: 14px;}
+
+    body .modal-sm{max-width: 500px;}
+    body .modal-dialog{vertical-align: bottom; padding: 20px 50px 50px 50px}
+    body .modal-body{padding: 25px}
+}
