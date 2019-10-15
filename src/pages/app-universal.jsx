@@ -1,6 +1,7 @@
 
 import Footer from './layouts/footer/index.jsx';
 import Header from './layouts/header/index.jsx';
+import { Helmet } from 'react-helmet';
 import Home from './home/index.jsx';
 import Language from './language/index.jsx';
 import Login from './login/login/index.jsx';
@@ -15,29 +16,35 @@ import SlotMachine from './slot-machine/index.jsx';
 
 const AppUniversal = function (props) {
     return (
-        <div>
-            <Switch>
-                <Route exact path="/(login)" component={LoginContainer}/>
-                <Route component={DefaultContainer}/>
-            </Switch>
-        </div>
+        <Switch>
+            <Route exact path="/(login)" component={LoginContainer}/>
+            <Route component={DefaultContainer}/>
+        </Switch>
     );
 }
 
 const LoginContainer = () => (
     <div className="">
-      <Route exact path="/" render={() => <Redirect to="/login" />} />
-      <Route path="/login" component={Login} />
+        <Helmet>
+            <title>Login</title>
+            <meta name="description" content="Ontabee application" />
+        </Helmet>
+        <Route exact path="/" render={() => <Redirect to="/login" />} />
+        <Route path="/login" component={Login} />
     </div>
 );
   
   
 const DefaultContainer = () => (
     <div>
+        <Helmet>
+            <title>Welcome to Ontabee</title>
+            <meta name="description" content="Ontabee Application" />
+        </Helmet>
         <Route component={Header} />
         <Route component={Navbar} />
         <Route path="/" component={Home} />
-        <Route path="/language" component={Language} />
+        <Route path="/setting/language" component={Language} />
         <Route path="/slot-game" component={SlotMachine} />
         <Route path="/restaurants" component={Restaurants} />
         <Route path="/profile" component={Profile} />

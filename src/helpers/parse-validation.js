@@ -1,6 +1,3 @@
-'use strict';
-
-
 const parseReason = function (message) {
 
     const regexBecause = /because \[(.*?)(\]|$)/;

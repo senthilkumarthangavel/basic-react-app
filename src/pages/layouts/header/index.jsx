@@ -6,6 +6,7 @@ class HeaderPage extends Component {
         return [
 			<header className="site_header">
 				<div className="header_left pull-left">
+					<a className="menu_action pull-left hide" id="header_menu_action"><i className="la la-bars"></i></a>
 					<div className="branch dropdown pull-left">
 						<a className="toggle" data-toggle="dropdown">
 							<i className="fi shop"></i>

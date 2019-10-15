@@ -1,15 +1,36 @@
+import Actions from './actions';
+import { connect } from 'react-redux';
+import _RHelper from '../../helpers/redux';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 class HomePage extends Component {
 	
-	render() {
-		return [
-			<div>
+	constructor(props) {
+		
+		super(props);
 
-			</div>
-		]
+		this.state = _RHelper.getState(this.props);
+	}
+
+	componentWillReceiveProps(nextProps) {
+		
+		this.setState(_RHelper.getState(nextProps));
+	}
+	
+	render() {
+
+		return (
+			<>
+				<p onClick={(e) => {Actions.show()}} style={{'paddingLeft': '100px'}}>{this.state.count}</p>
+			</>
+		)
 	}
 }
 
-export default HomePage;
+const mapStateToProps = (state) => _RHelper.mapStateToProps(state, [
+	'HomePage',
+	'LanguagePage'
+]);
+
+export default connect(mapStateToProps)(HomePage);

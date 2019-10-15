@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
+//import { render } from "react-dom";
+//window.$ = window.jQuery = require('jquery')
+
+//import { Link } from 'react-router-dom';
 import './index.css';
 
 // import $ from 'jquery';
@@ -13,7 +17,9 @@ class LanguagePage extends Component {
 	
 	componentDidMount() {
 		
-		
+		// $("button").click(function() {
+		// 	$("h1").toggleClass("red");
+		// });
 		/*custom Script Load*/
         // const script = document.createElement("script");
         // script.src = [
@@ -23,7 +29,7 @@ class LanguagePage extends Component {
 		// //script.async = true;
 		// console.log('script: ', script);
 		// document.body.appendChild(script);
-		
+		//this.$el = $(this.el);
 		// $('.scrollbar-inner').scrollbar({
 		// 	scrollx: false
 		// });
@@ -33,6 +39,13 @@ class LanguagePage extends Component {
 		
 		return (
 			<section className="site_content language.html">
+				<Helmet>
+					<title>Language</title>
+				</Helmet>
+				{/* <div className="App">
+					<h1>jquery in React App</h1>
+					<button>Click Me</button>
+				</div> */}
 				<form className="search full_row">
 					<h1 className="mb10">Choose Your Languages</h1>
 					<p className="sub_desc">You can choose upto 3 languages to view your site in 3 languages.</p>
@@ -45,7 +58,7 @@ class LanguagePage extends Component {
 					<a href="branch-setup/address.html" className="btn circle" data-toggle="tooltip" data-placement="bottom" title="Save & Continue"><i className="la la-angle-right"></i></a>
 				</form> 
 
-				<div className="scrollbar-inner">
+				<div className="scrollbar-inner" ref={el => this.el = el}>
 					<ul className="language reset">
 						<li>
 							<input id="id_1" type="checkbox" className="hide" />

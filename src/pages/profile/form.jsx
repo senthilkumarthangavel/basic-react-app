@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Actions from './actions';
-import Store from './store';
+//import Actions from './actions';
+//import Store from './store';
 
 import Button from '../../components/form/button.jsx';
 import Spinner from '../../components/form/spinner.jsx';

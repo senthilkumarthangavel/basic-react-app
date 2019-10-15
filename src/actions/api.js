@@ -1,4 +1,3 @@
-'use strict';
 import JsonFetch from '../helpers/json-fetch';
 
 class Actions {

@@ -75,15 +75,29 @@ $('.login .form-control').on('blur',function(){
 });
 
 //Menu
-$(".menu_action").click(function(){
+$(document).on("click", ".menu_action", function(){
+	alert()
 	$("body").toggleClass("menu_open");
 });
 
+$(document).on("click", ".site_menu li a", function(){
+	alert()
+	$("#header_menu_action").addClass("hide");
+});
+
+$(document).on("click", ".sub_menu .menu_action", function(){
+	alert()
+	$("#header_menu_action").removeClass("hide");
+});
+
 //Modal
-$(".modal-change").click(function(){
+$(document).on("click", ".modal-change", function(){
+	alert()
 	$("body").addClass("modal-open");
 });
-$(".modal .close").click(function(){
+
+$(document).on("click", ".modal .close", function(){
+	alert()
 	$("body").removeClass("modal-open");
 });
 

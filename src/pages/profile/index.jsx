@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Store from './store';
-import Actions from './actions';
+//import Actions from './actions';
 import Form from './form';
 
 class ProfilePage extends Component {

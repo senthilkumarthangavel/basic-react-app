@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import './index.css';
 
 class LoginPage extends Component {
@@ -42,9 +42,9 @@ class LoginPage extends Component {
 								<i className="fi lock1"></i>
 							</div> 
 
-							<Link to="/" className="btn">
+							<a href="/" className="btn">
 								<span className="loader"></span> Login to Account <i className="la la-arrow-right"></i>
-							</Link>
+							</a>
 							<p className="forgot mb0"><a data-toggle="modal" data-target="#modal-forgot">Forgot Password?</a></p>
 						</form>
 					</div>
