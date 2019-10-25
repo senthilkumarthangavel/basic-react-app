@@ -24,7 +24,10 @@ export default {
                 } else if (i !== 0) {
                     remainObj[val] = {};
                 }
+                return remainObj;
             });
+
+            
         }
 
         stateObj.state = ObjectAssign({}, firstObj, remainObj); //consider as state value in props object

@@ -51,7 +51,7 @@ class NavbarPage extends Component {
 			
 			return (
 				<div className="sub_menu">
-					<a className="menu_action"><i className="la la-arrow-left"></i></a>
+					<a href="#/" className="menu_action"><i className="la la-arrow-left"></i></a>
 					<h2 className="regular">Branch Setup</h2>
 					<div className="scrollbar-inner">
 						<ul>
@@ -72,7 +72,7 @@ class NavbarPage extends Component {
 			
 			return (
 				<div className="sub_menu">
-					<a className="menu_action"><i className="la la-arrow-left"></i></a>
+					<a href="#/" className="menu_action"><i className="la la-arrow-left"></i></a>
 					<h2 className="regular">Setting</h2>
 					<div className="scrollbar-inner">
 						<ul>
@@ -95,7 +95,6 @@ class NavbarPage extends Component {
     render() {
 
 		let history = this.props.history;
-		console.log('history: ', history);
 		let location = history ? history.location : null;
 		
 		return ([

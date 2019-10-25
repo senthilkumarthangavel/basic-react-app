@@ -13,7 +13,7 @@ class HomePage extends Component {
 		this.state = _RHelper.getState(this.props);
 	}
 
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 		
 		this.setState(_RHelper.getState(nextProps));
 	}

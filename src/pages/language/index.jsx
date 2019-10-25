@@ -1,38 +1,30 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-
-//import { render } from "react-dom";
-//window.$ = window.jQuery = require('jquery')
+import { Helmet } from 'react-helmet-async';
 
 //import { Link } from 'react-router-dom';
 import './index.css';
+import _scriptHelper from '../../helpers/onload-script.js';
 
-// import $ from 'jquery';
-// window.jQuery = $;
-// window.$ = $;
-// global.jQuery = $;
-// console.log($)
+import $ from 'jquery';
 
 class LanguagePage extends Component {
 	
+	constructor(props) {
+		
+		super(props);
+		
+		this.onLoadScript = this.onLoadScript.bind(this);
+	}
+	
 	componentDidMount() {
 		
-		// $("button").click(function() {
-		// 	$("h1").toggleClass("red");
-		// });
-		/*custom Script Load*/
-        // const script = document.createElement("script");
-        // script.src = [
-        //     '/js/custom.js'
-		// ];
+		_scriptHelper.scriptOnload(this.onLoadScript);
+	}
+	
+	onLoadScript() {
 		
-		// //script.async = true;
-		// console.log('script: ', script);
-		// document.body.appendChild(script);
-		//this.$el = $(this.el);
-		// $('.scrollbar-inner').scrollbar({
-		// 	scrollx: false
-		// });
+		console.log('$("body"): ', $('body'));
+		return true;
 	}
 
 	render() {
@@ -42,10 +34,6 @@ class LanguagePage extends Component {
 				<Helmet>
 					<title>Language</title>
 				</Helmet>
-				{/* <div className="App">
-					<h1>jquery in React App</h1>
-					<button>Click Me</button>
-				</div> */}
 				<form className="search full_row">
 					<h1 className="mb10">Choose Your Languages</h1>
 					<p className="sub_desc">You can choose upto 3 languages to view your site in 3 languages.</p>
@@ -62,123 +50,123 @@ class LanguagePage extends Component {
 					<ul className="language reset">
 						<li>
 							<input id="id_1" type="checkbox" className="hide" />
-							<label for="id_1"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<label htmlFor="id_1"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
-							<input id="id_2" type="checkbox" className="hide" />
-							<label for="id_2"><i>Al</i><span>Albania</span><span>Albania</span></label>
+							<input id="id_2" type="checkbox" className="hide" defaultChecked />
+							<label htmlFor="id_2"><i>Al</i><span>Albania</span><span>Albania</span></label>
 						</li>
 						<li>
-							<input id="id_3" type="checkbox" className="hide" checked />
-							<label for="id_3"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
+							<input id="id_3" type="checkbox" className="hide"  />
+							<label htmlFor="id_3"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
 						</li>
 						<li>
-							<input id="id_4" type="checkbox" className="hide" />
-							<label for="id_4"><i>An</i><span>Andorra</span><span>Andorra</span></label>
+							<input id="id_4" type="checkbox" className="hide" defaultChecked/>
+							<label htmlFor="id_4"><i>An</i><span>Andorra</span><span>Andorra</span></label>
 						</li>
 						<li>
 							<input id="id_5" type="checkbox" className="hide" />
-							<label for="id_5"><i>An</i><span>Angola</span><span>Angola</span></label>
+							<label htmlFor="id_5"><i>An</i><span>Angola</span><span>Angola</span></label>
 						</li>
 						<li>
-							<input id="id_6" type="checkbox" className="hide" checked />
-							<label for="id_6"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<input id="id_6" type="checkbox" className="hide"  />
+							<label htmlFor="id_6"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_7" type="checkbox" className="hide" />
-							<label for="id_7"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<label htmlFor="id_7"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_8" type="checkbox" className="hide" />
-							<label for="id_8"><i>Al</i><span>Albania</span><span>Albania</span></label>
+							<label htmlFor="id_8"><i>Al</i><span>Albania</span><span>Albania</span></label>
 						</li>
 						<li>
 							<input id="id_9" type="checkbox" className="hide" />
-							<label for="id_9"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
+							<label htmlFor="id_9"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
 						</li>
 						<li>
 							<input id="id_10" type="checkbox" className="hide" />
-							<label for="id_10"><i>An</i><span>Andorra</span><span>Andorra</span></label>
+							<label htmlFor="id_10"><i>An</i><span>Andorra</span><span>Andorra</span></label>
 						</li>
 						<li>
-							<input id="id_11" type="checkbox" className="hide" checked />
-							<label for="id_11"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<input id="id_11" type="checkbox" className="hide"  />
+							<label htmlFor="id_11"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_12" type="checkbox" className="hide" />
-							<label for="id_12"><i>Al</i><span>Albania</span><span>Albania</span></label>
+							<label htmlFor="id_12"><i>Al</i><span>Albania</span><span>Albania</span></label>
 						</li>
 						<li>
 							<input id="id_13" type="checkbox" className="hide" />
-							<label for="id_13"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
+							<label htmlFor="id_13"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
 						</li>
 						<li>
 							<input id="id_14" type="checkbox" className="hide" />
-							<label for="id_14"><i>An</i><span>Andorra</span><span>Andorra</span></label>
+							<label htmlFor="id_14"><i>An</i><span>Andorra</span><span>Andorra</span></label>
 						</li>
 						<li>
 							<input id="id_15" type="checkbox" className="hide" />
-							<label for="id_15"><i>An</i><span>Angola</span><span>Angola</span></label>
+							<label htmlFor="id_15"><i>An</i><span>Angola</span><span>Angola</span></label>
 						</li>
 						<li>
 							<input id="id_16" type="checkbox" className="hide" />
-							<label for="id_16"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<label htmlFor="id_16"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_17" type="checkbox" className="hide" />
-							<label for="id_17"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<label htmlFor="id_17"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_18" type="checkbox" className="hide" />
-							<label for="id_18"><i>Al</i><span>Albania</span><span>Albania</span></label>
+							<label htmlFor="id_18"><i>Al</i><span>Albania</span><span>Albania</span></label>
 						</li>
 						<li>
 							<input id="id_19" type="checkbox" className="hide" />
-							<label for="id_19"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
+							<label htmlFor="id_19"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
 						</li>
 						<li>
 							<input id="id_20" type="checkbox" className="hide" />
-							<label for="id_20"><i>An</i><span>Andorra</span><span>Andorra</span></label>
+							<label htmlFor="id_20"><i>An</i><span>Andorra</span><span>Andorra</span></label>
 						</li>
 						<li>
 							<input id="id_21" type="checkbox" className="hide" />
-							<label for="id_21"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<label htmlFor="id_21"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_22" type="checkbox" className="hide" />
-							<label for="id_22"><i>Al</i><span>Albania</span><span>Albania</span></label>
+							<label htmlFor="id_22"><i>Al</i><span>Albania</span><span>Albania</span></label>
 						</li>
 						<li>
 							<input id="id_23" type="checkbox" className="hide" />
-							<label for="id_23"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
+							<label htmlFor="id_23"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
 						</li>
 						<li>
 							<input id="id_24" type="checkbox" className="hide" />
-							<label for="id_24"><i>An</i><span>Andorra</span><span>Andorra</span></label>
+							<label htmlFor="id_24"><i>An</i><span>Andorra</span><span>Andorra</span></label>
 						</li>
 						<li>
 							<input id="id_25" type="checkbox" className="hide" />
-							<label for="id_25"><i>An</i><span>Angola</span><span>Angola</span></label>
+							<label htmlFor="id_25"><i>An</i><span>Angola</span><span>Angola</span></label>
 						</li>
 						<li>
 							<input id="id_26" type="checkbox" className="hide" />
-							<label for="id_26"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<label htmlFor="id_26"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_27" type="checkbox" className="hide" />
-							<label for="id_27"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
+							<label htmlFor="id_27"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
 						</li>
 						<li>
 							<input id="id_28" type="checkbox" className="hide" />
-							<label for="id_28"><i>Al</i><span>Albania</span><span>Albania</span></label>
+							<label htmlFor="id_28"><i>Al</i><span>Albania</span><span>Albania</span></label>
 						</li>
 						<li>
 							<input id="id_29" type="checkbox" className="hide" />
-							<label for="id_29"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
+							<label htmlFor="id_29"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
 						</li>
 						<li>
 							<input id="id_30" type="checkbox" className="hide" />
-							<label for="id_30"><i>An</i><span>Andorra</span><span>Andorra</span></label>
+							<label htmlFor="id_30"><i>An</i><span>Andorra</span><span>Andorra</span></label>
 						</li>
 					</ul> 
 				</div>

@@ -37,7 +37,7 @@ $(document).ready(function(){
 	});
 	
 	//Scrollbar
-	jQuery('.scrollbar-inner').scrollbar({
+	window.$('.scrollbar-inner').scrollbar({
 		scrollx: false
 	});
 
