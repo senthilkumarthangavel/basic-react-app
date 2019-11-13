@@ -42,7 +42,7 @@ class LoginPage extends Component {
 								<i className="fi lock1"></i>
 							</div> 
 
-							<a href="/" className="btn">
+							<a href="/admin" className="btn">
 								<span className="loader"></span> Login to Account <i className="la la-arrow-right"></i>
 							</a>
 							<p className="forgot mb0"><a href="#/" data-toggle="modal" data-target="#modal-forgot">Forgot Password?</a></p>

@@ -30,15 +30,42 @@ class NavbarPage extends Component {
 	getMainmenuPath(pathname) {
 		
 		let path = pathname.toString().split('/')
-		return path.length > 1 ? path[1] : null;
+		return path.length > 2 ? path[2] : null;
 	}
 
 	getSubmenuPath(pathname) {
 		
 		let path = pathname.toString().split('/')
-		return path.length > 2 ? path[2] : null;
+		return path.length > 3 ? path[3] : null;
 	}
 
+	// async filterRestaurant(restaurants, city) {
+		
+	// 	return restaurants.filter((restaurant) => {
+	// 		return restaurants.city === city ? city : restaurants.city;
+	// 	})
+	// }
+
+	// async getListItem(e){
+
+	// 	var city = e ? e.target.id : null;
+
+	// 	var restaurants = this.state.restaurants;
+	// 	if (city) {
+	// 		restaurants = await this.filterRestaurant(restaurants, city);
+	// 	}
+	// 	var displaylist = (restaurants && restaurants.length > 0) ?
+			
+	// 		restaurants.map(function (restaurants) {
+			
+	// 			return <Restaurantlist data={restaurants}/>
+			
+	// 		}): null;
+		
+	// 	//console.log("displaylist", displaylist);
+		
+	// 	return displaylist;
+	// }
 	getSubmenu(location) {
 		
 		let main_menu = this.getMainmenuPath(location.pathname);
@@ -105,17 +132,17 @@ class NavbarPage extends Component {
 				<div className="scrollbar-inner">
 					<ul className="main">
 						<li>
-							<Link to="/" className={`${location.pathname === '/' ? 'current' : null}`}><i className="lni-grid-alt"></i>Dashboard</Link>
+							<Link to="/admin" className={`${location.pathname === '/admin' ? 'current' : null}`}><i className="lni-grid-alt"></i>Dashboard</Link>
 						</li>
 						<li>
-							<Link to="/branch-setup" className={`${location.pathname === '/branch-setup' ? 'current' : null}`}><i className="fi shop"></i>Branch Setup</Link>
+							<Link to="/admin/branch-setup" className={`${location.pathname === '/admin/branch-setup' ? 'current' : null}`}><i className="fi shop"></i>Branch Setup</Link>
 						</li>
 						<li><a href="/orders.html"><i className="fi dinner"></i>Orders</a></li>
 						<li><a href="/frondend.html"><i className="fi browser-setting"></i>Frontend</a></li>
 						<li><a href="/users.html"><i className="fi user"></i>Users</a></li>
 						<li><a href="/delivery-boy.html"><i className="fi delivery-man1"></i>Delivery Boy</a></li>
 						<li>
-							<Link to="/setting/language" className={`${location.pathname === '/setting/language' ? 'current' : null}`}>
+							<Link to="/admin/setting/language" className={`${location.pathname === '/admin/setting/language' ? 'current' : null}`}>
 								<i className="fi setting1"></i>Settings
 							</Link>
 						</li>

@@ -1,11 +1,17 @@
+
+import { connect } from 'react-redux';
+import _commonHelper from '../../helpers/common';
+import _RHelper from '../../helpers/redux';
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 //import { Link } from 'react-router-dom';
 import './index.css';
+import LanguageItem from './_item';
 import _scriptHelper from '../../helpers/onload-script.js';
 
 import $ from 'jquery';
+import Actions from './actions';
 
 class LanguagePage extends Component {
 	
@@ -13,9 +19,19 @@ class LanguagePage extends Component {
 		
 		super(props);
 		
+		Actions.getDetails();
+
+		this.state = _RHelper.getState(this.props);
+
 		this.onLoadScript = this.onLoadScript.bind(this);
+		this.getItem = this.getItem.bind(this);
 	}
-	
+
+	UNSAFE_componentWillReceiveProps(nextProps) {
+		
+		this.setState(_RHelper.getState(nextProps));
+	}
+
 	componentDidMount() {
 		
 		_scriptHelper.scriptOnload(this.onLoadScript);
@@ -23,12 +39,25 @@ class LanguagePage extends Component {
 	
 	onLoadScript() {
 		
-		console.log('$("body"): ', $('body'));
 		return true;
+	}
+
+	getItem() {
+
+		const {
+			data,
+			loading
+		} = this.state;
+
+		return !_commonHelper.isEmpty(data) ? Object.keys(data).map((index) => {
+			return <LanguageItem item={data[index]} {...this.state}/>;
+		}) : null;
+
 	}
 
 	render() {
 		
+		console.log('this.state: ', this.state);
 		return (
 			<section className="site_content language.html">
 				<Helmet>
@@ -48,126 +77,7 @@ class LanguagePage extends Component {
 
 				<div className="scrollbar-inner" ref={el => this.el = el}>
 					<ul className="language reset">
-						<li>
-							<input id="id_1" type="checkbox" className="hide" />
-							<label htmlFor="id_1"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_2" type="checkbox" className="hide" defaultChecked />
-							<label htmlFor="id_2"><i>Al</i><span>Albania</span><span>Albania</span></label>
-						</li>
-						<li>
-							<input id="id_3" type="checkbox" className="hide"  />
-							<label htmlFor="id_3"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
-						</li>
-						<li>
-							<input id="id_4" type="checkbox" className="hide" defaultChecked/>
-							<label htmlFor="id_4"><i>An</i><span>Andorra</span><span>Andorra</span></label>
-						</li>
-						<li>
-							<input id="id_5" type="checkbox" className="hide" />
-							<label htmlFor="id_5"><i>An</i><span>Angola</span><span>Angola</span></label>
-						</li>
-						<li>
-							<input id="id_6" type="checkbox" className="hide"  />
-							<label htmlFor="id_6"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_7" type="checkbox" className="hide" />
-							<label htmlFor="id_7"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_8" type="checkbox" className="hide" />
-							<label htmlFor="id_8"><i>Al</i><span>Albania</span><span>Albania</span></label>
-						</li>
-						<li>
-							<input id="id_9" type="checkbox" className="hide" />
-							<label htmlFor="id_9"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
-						</li>
-						<li>
-							<input id="id_10" type="checkbox" className="hide" />
-							<label htmlFor="id_10"><i>An</i><span>Andorra</span><span>Andorra</span></label>
-						</li>
-						<li>
-							<input id="id_11" type="checkbox" className="hide"  />
-							<label htmlFor="id_11"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_12" type="checkbox" className="hide" />
-							<label htmlFor="id_12"><i>Al</i><span>Albania</span><span>Albania</span></label>
-						</li>
-						<li>
-							<input id="id_13" type="checkbox" className="hide" />
-							<label htmlFor="id_13"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
-						</li>
-						<li>
-							<input id="id_14" type="checkbox" className="hide" />
-							<label htmlFor="id_14"><i>An</i><span>Andorra</span><span>Andorra</span></label>
-						</li>
-						<li>
-							<input id="id_15" type="checkbox" className="hide" />
-							<label htmlFor="id_15"><i>An</i><span>Angola</span><span>Angola</span></label>
-						</li>
-						<li>
-							<input id="id_16" type="checkbox" className="hide" />
-							<label htmlFor="id_16"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_17" type="checkbox" className="hide" />
-							<label htmlFor="id_17"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_18" type="checkbox" className="hide" />
-							<label htmlFor="id_18"><i>Al</i><span>Albania</span><span>Albania</span></label>
-						</li>
-						<li>
-							<input id="id_19" type="checkbox" className="hide" />
-							<label htmlFor="id_19"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
-						</li>
-						<li>
-							<input id="id_20" type="checkbox" className="hide" />
-							<label htmlFor="id_20"><i>An</i><span>Andorra</span><span>Andorra</span></label>
-						</li>
-						<li>
-							<input id="id_21" type="checkbox" className="hide" />
-							<label htmlFor="id_21"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_22" type="checkbox" className="hide" />
-							<label htmlFor="id_22"><i>Al</i><span>Albania</span><span>Albania</span></label>
-						</li>
-						<li>
-							<input id="id_23" type="checkbox" className="hide" />
-							<label htmlFor="id_23"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
-						</li>
-						<li>
-							<input id="id_24" type="checkbox" className="hide" />
-							<label htmlFor="id_24"><i>An</i><span>Andorra</span><span>Andorra</span></label>
-						</li>
-						<li>
-							<input id="id_25" type="checkbox" className="hide" />
-							<label htmlFor="id_25"><i>An</i><span>Angola</span><span>Angola</span></label>
-						</li>
-						<li>
-							<input id="id_26" type="checkbox" className="hide" />
-							<label htmlFor="id_26"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_27" type="checkbox" className="hide" />
-							<label htmlFor="id_27"><i>Af</i><span>Afghanistan</span><span>Afghanistan</span></label>
-						</li>
-						<li>
-							<input id="id_28" type="checkbox" className="hide" />
-							<label htmlFor="id_28"><i>Al</i><span>Albania</span><span>Albania</span></label>
-						</li>
-						<li>
-							<input id="id_29" type="checkbox" className="hide" />
-							<label htmlFor="id_29"><i>Al</i><span>Algeria</span><span>Algeria</span></label>
-						</li>
-						<li>
-							<input id="id_30" type="checkbox" className="hide" />
-							<label htmlFor="id_30"><i>An</i><span>Andorra</span><span>Andorra</span></label>
-						</li>
+						{this.getItem()}
 					</ul> 
 				</div>
 			</section>
@@ -175,4 +85,8 @@ class LanguagePage extends Component {
 	}
 }
 
-export default LanguagePage;
+const mapStateToProps = (state) => _RHelper.mapStateToProps(state, [
+	'LanguagePage'
+]);
+
+export default connect(mapStateToProps)(LanguagePage);

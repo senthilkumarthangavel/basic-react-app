@@ -6,10 +6,21 @@ import Home from './home/index.jsx';
 import Language from './language/index.jsx';
 import Login from './login/login/index.jsx';
 import Navbar from './layouts/navbar/index.jsx';
-//import NotFound from './not-found.jsx';
+import NotFound from './not-found.jsx';
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-//import RouteRedirect from "../components/route-redirect.jsx";
+import RouteRedirect from "../components/route-redirect.jsx";
+
+const authCheck = function(props, component){
+    
+    var isLogged = true;
+    
+    if (isLogged)
+        return component;
+    else
+        return <Redirect to="/login"/>;
+
+}
 
 const AppUniversal = function (props) {
     return (
@@ -28,6 +39,9 @@ const LoginContainer = () => (
         </Helmet>
         <Route exact path="/" render={() => <Redirect to="/login" />} />
         <Route path="/login" component={Login} />
+        <RouteRedirect from="/moved" to="/" code={301} />
+        <Redirect to="/" />
+        <Route component={NotFound} />
     </HelmetProvider>
 );
   
@@ -40,8 +54,8 @@ const DefaultContainer = () => (
         </Helmet>
         <Route component={Header} />
         <Route component={Navbar} />
-        <Route path="/" component={Home} />
-        <Route path="/setting/language" component={Language} />
+        <Route exact path="(/|/admin)" render={(props) => authCheck(props, <Home />)} />
+        <Route path="/admin/setting/language" render={(props) => authCheck(props, <Language />)} />
 
         {/* <RouteRedirect from="/moved" to="/" code={301} />
         <Redirect to="/" />

@@ -9,7 +9,7 @@ const defaultProps = {
 
 module.exports = { 
  
-  scriptOnload: function (onloadScript, props = defaultProps) {
+    scriptOnload: function (onloadScript, props = defaultProps) {
 
         if (this.isLoadedScript(props.src, props.element))
             this.deleteExistScript(props.src, props.element);
