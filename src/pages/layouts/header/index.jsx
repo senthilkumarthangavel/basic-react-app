@@ -29,7 +29,9 @@ class HeaderPage extends Component {
 							<i className="la la-user"></i> <span className="medium">Tamilvanan T</span> tamilvanan@ontabee.com
 						</a>
 						<ul className="dropdown-menu">
-							<li><a href="#/" ><i className="la la-user"></i>My Profile</a></li>
+							<li>
+								<Link to="/admin/my-account/profile"><i className="la la-user"></i>My Profile</Link>
+							</li>
 							<li><a href="#/" ><i className="la la-language"></i>Language</a></li>
 							<li><a href="#/" ><i className="la la-plug"></i>Addon Services</a></li>
 							<li><a href="#/" ><i className="la la-file-text"></i>Terms & Conditions</a></li>

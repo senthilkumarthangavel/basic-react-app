@@ -1,6 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 import Home from '../../home/reducer';
 import Language from '../../language/reducer';
+import MyaccountProfile from '../../my-account/profile/reducer';
 
 /*
     Reducers name should be page component name 
@@ -12,7 +13,8 @@ import Language from '../../language/reducer';
 const store =  createStore(
     combineReducers({
         'HomePage': Home,
-        'LanguagePage': Language
+        'LanguagePage': Language,
+        'MyaccountProfilePage': MyaccountProfile
     }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

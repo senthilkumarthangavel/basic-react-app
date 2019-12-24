@@ -1,11 +1,13 @@
 
 import Footer from './layouts/footer/index.jsx';
+import GraphQL from './graphql/index.jsx';
 import Header from './layouts/header/index.jsx';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Home from './home/index.jsx';
 import Language from './language/index.jsx';
 import Login from './login/login/index.jsx';
 import Navbar from './layouts/navbar/index.jsx';
+import MyAccountProfile from './my-account/profile/index';
 import NotFound from './not-found.jsx';
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
@@ -56,7 +58,8 @@ const DefaultContainer = () => (
         <Route component={Navbar} />
         <Route exact path="(/|/admin)" render={(props) => authCheck(props, <Home />)} />
         <Route path="/admin/setting/language" render={(props) => authCheck(props, <Language />)} />
-
+        <Route exact path="/admin/graph-ql" render={(props) => authCheck(props, <GraphQL />)} />
+        <Route exact path="/admin/my-account/profile" render={(props) => authCheck(props, <MyAccountProfile />)} />
         {/* <RouteRedirect from="/moved" to="/" code={301} />
         <Redirect to="/" />
         <Route component={NotFound} /> */}

@@ -42,6 +42,11 @@ class LanguagePage extends Component {
 		return true;
 	}
 
+	componentWillUnmount() {
+
+		Actions.reset();
+	}
+
 	getItem() {
 
 		const {

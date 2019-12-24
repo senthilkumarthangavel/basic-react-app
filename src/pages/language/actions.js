@@ -29,6 +29,14 @@ class Actions {
             type: Constants.HOME_PAGE_SHOW
         });
     }
+
+    static reset() {
+        
+        Store.dispatch({
+            type: Constants.RESET_LANGUAGE_STORE
+        });
+    }    
+    
 }
 
 

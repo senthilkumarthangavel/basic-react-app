@@ -4,6 +4,7 @@ import ObjectAssign from 'object-assign';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import renderHTML from 'react-render-html';
+import clientValidation from '../../helpers/validation/validationField';
 
 const propTypes = {
     autoCapitalize: PropTypes.string,
@@ -11,6 +12,7 @@ const propTypes = {
     hasError: PropTypes.bool,
     help: PropTypes.string,
     inputClasses: PropTypes.object,
+    validateOption: PropTypes.object,
     label: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array
@@ -60,18 +62,61 @@ const defaultProps = {
 class TextControl extends Component {
     constructor(props){
         super(props);
+        
         this.state = {
-          type: this.props.type,
+            type: this.props.type,
+            success: false,
+            error: undefined,
+            hasError: {},
+            help: {},
         }
+
         this.handleBlur = this.handleBlur.bind(this);
         this.showHide = this.showHide.bind(this);
+        this.validate = this.validate.bind(this);
     }
 
-    handleBlur(x,y) {
-        const { onBlur } = this.props;
-        onBlur(x,y);
+    validate() {
+
+        var validation = clientValidation({
+            value: this.input.value,
+            label: this.props.label,
+            name: this.props.name,
+        }, this.props.validateOption);
+
+        if (validation.error) {
+            this.setState(ObjectAssign({}, this.state, validation));
+            
+            return true;
+        } else {
+            this.setState(ObjectAssign({}, this.state, {
+                success: false,
+                error: undefined,
+                hasError: {},
+                help: {},
+            }));
+            
+            return false;
+        }
+
     }
+
+    handleBlur(e) {
+        
+        this.validate();
+
+        const { onBlur } = this.props;
+        onBlur(e);
+    }
+
+    handleChange(e) {
+        
+        this.validate();
+        this.props.onChange(e)
+    }
+
     showHide(e){
+        
         e.preventDefault();
         e.stopPropagation();
         this.setState(ObjectAssign(this.state, {
@@ -89,6 +134,7 @@ class TextControl extends Component {
     }
 
     render() {
+        
         const groupClasses = ClassNames(ObjectAssign({
             'form-group': true,
             'has-error': this.props.hasError
@@ -118,11 +164,11 @@ class TextControl extends Component {
 
         return (
             <ControlGroup
-                hasError={this.props.hasError}
+                hasError={this.state.hasError ? this.state.hasError[this.props.name] : this.props.hasError}
                 label={this.props.label}
                 hideLabel={this.props.hideLabel}
                 labelPositionBottom={this.props.labelPositionBottom}
-                help={this.props.help}
+                help={this.state.help ? this.state.help[this.props.name] : this.props.help }
                 groupClasses={this.props.groupClasses}
                 >
                 
