@@ -5,34 +5,60 @@ import ParseValidation from '../parse-validation';
 
 const getSchema = function (data, validateOption) {
 
-    let joiString = Joi;
-    
-    if (validateOption) {
-
-        //number (true/false)
-        if (validateOption.number) {
-            joiString = joiString.number();
-        } else {
-            joiString = joiString.string();
+    const schemaObject = {};
+    let joiSchemaDescription = '';
+    let type = 'string';
+    if (type === 'string' ) {
+        joiSchemaDescription += 'Joi.string()';
+        if (validateOption && validateOption.min_length) {
+            joiSchemaDescription += '.min(min_length)';
+        }
+        if (validateOption && validateOption.max_length) {
+            joiSchemaDescription += '.max(max_length)';
+        }
+        if (validateOption && validateOption.required) {
+            joiSchemaDescription += '.required()';
+        } else if (validateOption && !validateOption.required) {
+            joiSchemaDescription += '.optional()';
         }
 
-        //email (true/false)
-        if (validateOption.email) {
-            joiString = joiString.email();
+        if (validateOption && validateOption.required === undefined) {
+            joiSchemaDescription += '.required()';
+            
         }
-
-        //required (true/false)
-        if (!validateOption.required) {
-            joiString = joiString.optional();
-        } else {
-            joiString = joiString.required();
-        }
-    } else {
-        joiString = joiString.string().required();
+        console.log('joiSchemaDescription: ', joiSchemaDescription);
+        schemaObject[data.name] = eval(`${joiSchemaDescription};`);
+        
     }
+    console.log('schemaObject: ', schemaObject);
+    // let joiString = Joi;
+    
+    // if (validateOption) {
+
+    //     //number (true/false)
+    //     if (validateOption.number) {
+    //         joiString = joiString.number();
+    //     } else {
+    //         joiString = joiString.string();
+    //     }
+
+    //     //email (true/false)
+    //     if (validateOption.email) {
+    //         joiString = joiString.email();
+    //     }
+
+    //     //required (true/false)
+    //     if (!validateOption.required) {
+    //         joiString = joiString.optional();
+    //     } else {
+    //         joiString = joiString.required();
+    //     }
+    // } else {
+    //     joiString = joiString.string().required();
+    // }
     
     return Joi.object().keys({
-        name: joiString.label(data.label ? data.label : data.name)
+        name: Joi.string().min(5).required().label(data.label ? data.label : data.name)
                 .error(errors => JoiCustomValidation(errors))
     });
 };
